@@ -3,10 +3,12 @@ package controller;
 import java.util.List;
 import java.util.ArrayList;
 import model.Kahoot;
+import view.Display;
 
 public class Controller
 {
 	private List<Kahoot> myKahoots;
+	private Display popup = new Display();
 	
 	public Controller()
 	{
@@ -17,6 +19,17 @@ public class Controller
 	{
 		Kahoot myFirstKahoot = new Kahoot();
 		myKahoots.add(myFirstKahoot);
+		
+		fillTheList();
+		showTheList();
+	}
+	
+	private void showTheList()
+	{
+		for(int index = 0; index < myKahoots.size(); index++)
+		{
+			popup.displayText(myKahoots.get(index).toString());
+		}
 	}
 	
 	/**

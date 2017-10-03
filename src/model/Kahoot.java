@@ -28,4 +28,11 @@ public class Kahoot
 		this.creator = creator;
 		this.question_count = question_count;
 	}
+	
+	public String toString()
+	{
+		String desc = "This Kahoot was made by " + creator + " and has " + question_count + " questions.";
+		
+		return desc;
+	}
 }
