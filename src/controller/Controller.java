@@ -8,11 +8,12 @@ import view.Display;
 public class Controller
 {
 	private List<Kahoot> myKahoots;
-	private Display popup = new Display();
+	private Display popup;
 	
 	public Controller()
 	{
 		myKahoots = new ArrayList<Kahoot>();
+		popup = new Display();
 	}
 	
 	public void start()
@@ -24,6 +25,10 @@ public class Controller
 		showTheList();
 	}
 	
+	
+	/**
+	 * Uses a for loop to print out the array to popup windows
+	 */
 	private void showTheList()
 	{
 		for(int index = 0; index < myKahoots.size(); index++)
@@ -31,6 +36,7 @@ public class Controller
 			popup.displayText(myKahoots.get(index).toString());
 		}
 	}
+	
 	
 	/**
 	 * Method that fills the myKahoots list with 5 Kahoots

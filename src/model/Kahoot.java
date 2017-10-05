@@ -35,4 +35,9 @@ public class Kahoot
 		
 		return desc;
 	}
+	
+	public String getCreator()
+	{
+		return this.creator;
+	}
 }
