@@ -31,9 +31,28 @@ public class Controller
 	 */
 	private void showTheList()
 	{
+		String current_creator = "";
 		for(int index = 0; index < myKahoots.size(); index++)
 		{
+			current_creator = myKahoots.get(index).getCreator();
+			
+			Kahoot current_kahoot = myKahoots.get(index);
+			String creator = current_kahoot.getCreator();
+			
 			popup.displayText(myKahoots.get(index).toString());
+			
+			if(current_creator.equals("Nobody"))
+			{
+				for(int loop = 0; loop < 5; loop++)
+				{
+					popup.displayText("Wow nobody does a lot!");
+				}
+			}
+			
+			for(int current_letter_index = 0; current_letter_index < creator.length(); current_letter_index++)
+			{
+				popup.displayText(current_creator.substring(current_letter_index, current_letter_index + 1));
+			}
 		}
 	}
 	
@@ -43,11 +62,11 @@ public class Controller
 	 */
 	private void fillTheList()
 	{
-		Kahoot kahootWithName = new Kahoot("Aaron", 7);
+		Kahoot kahootWithName = new Kahoot("Aaron", 7, "All the colours of the animals");
 		Kahoot defaultKahoot = new Kahoot();
-		Kahoot fiftyStates = new Kahoot("Kashish", 50);
-		Kahoot mySecondKahoot = new Kahoot("Ethan", 19);
-		Kahoot theEpilogue = new Kahoot("KahootBot", 1);
+		Kahoot fiftyStates = new Kahoot("Kashish", 50, "The fifty United States");
+		Kahoot mySecondKahoot = new Kahoot("Ethan", 19, "The Double data type");
+		Kahoot theEpilogue = new Kahoot("KahootBot", Integer.MAX_VALUE, "Everything - Literally");
 		myKahoots.add(kahootWithName);
 		myKahoots.add(defaultKahoot);
 		myKahoots.add(fiftyStates);
