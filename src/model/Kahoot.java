@@ -35,7 +35,7 @@ public class Kahoot
 	
 	public String toString()
 	{
-		String desc = "This Kahoot was made by " + creator + ". The topic is '" + topic + "' and it has " + question_count + " questions.";
+		String desc = "Creator:" + creator + ". Topic:" + topic + ". Questions:" + question_count + ".";
 		
 		return desc;
 	}

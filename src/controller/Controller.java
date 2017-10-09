@@ -111,7 +111,13 @@ public class Controller
 			popup.displayText("'" + myKahoots.get(looping).getCreator() + "' created this Kahoot.");
 		}
 		
+		removed_kahoot.setCreator("Bob");
+		popup.displayText("Set the creator of the kahoot to 'Bob'");
 		
+		for(int loop = 0; loop < myKahoots.size(); loop++)
+		{
+			popup.displayText("'" + myKahoots.get(loop).getCreator() + "' created this Kahoot.");
+		}
 	}
 }
 
