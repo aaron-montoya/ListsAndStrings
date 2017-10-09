@@ -110,6 +110,8 @@ public class Controller
 		{
 			popup.displayText("'" + myKahoots.get(looping).getCreator() + "' created this Kahoot.");
 		}
+		
+		
 	}
 }
 

@@ -49,4 +49,18 @@ public class Kahoot
 	{
 		return this.topic;
 	}
+	
+	public void setCreator(String creator)
+	{
+		this.creator = creator;
+	}
 }
+
+
+
+
+
+
+
+
+
