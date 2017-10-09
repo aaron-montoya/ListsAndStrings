@@ -23,7 +23,8 @@ public class Controller
 		
 		fillTheList();
 //		showTheList();
-		changeTheList();
+//		changeTheList();
+		listPractice();
 	}
 	
 	
@@ -92,6 +93,23 @@ public class Controller
 		popup.displayText("The list is still: " + myKahoots.size() + " Kahoots");
 		removed = myKahoots.set(2, new Kahoot());
 		popup.displayText("The Kahoot by " + removed.getCreator() + " was replaced with one by " + myKahoots.get(2).getCreator());
+	}
+	
+	private void listPractice()
+	{
+		for(int loop = 0; loop < myKahoots.size(); loop++)
+		{
+			popup.displayText("'" + myKahoots.get(loop).getCreator() + "' created this Kahoot.");
+		}
+		
+		Kahoot removed_kahoot = myKahoots.remove(2);
+		myKahoots.add(removed_kahoot);
+		popup.displayText("Moved '" + removed_kahoot + "' to the end of the list");
+		
+		for(int looping = 0; looping < myKahoots.size(); looping++)
+		{
+			popup.displayText("'" + myKahoots.get(looping).getCreator() + "' created this Kahoot.");
+		}
 	}
 }
 
