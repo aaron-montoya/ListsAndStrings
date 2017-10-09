@@ -119,6 +119,16 @@ public class Controller
 			popup.displayText("'" + myKahoots.get(loop).getCreator() + "' created this Kahoot.");
 		}
 	}
+
+	public Display getPopup()
+	{
+		return popup;
+	}
+	
+	public ArrayList<Kahoot> getMyKahoots()
+	{
+		return (ArrayList<Kahoot>) myKahoots;
+	}
 }
 
 
