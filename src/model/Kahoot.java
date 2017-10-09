@@ -35,7 +35,7 @@ public class Kahoot
 	
 	public String toString()
 	{
-		String desc = "This Kahoot was made by " + creator + " and has " + question_count + " questions.";
+		String desc = "This Kahoot was made by " + creator + ". The topic is '" + topic + "' and it has " + question_count + " questions.";
 		
 		return desc;
 	}
@@ -43,5 +43,10 @@ public class Kahoot
 	public String getCreator()
 	{
 		return this.creator;
+	}
+	
+	public String getTopic()
+	{
+		return this.topic;
 	}
 }

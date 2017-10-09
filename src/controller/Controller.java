@@ -22,7 +22,8 @@ public class Controller
 		myKahoots.add(myFirstKahoot);
 		
 		fillTheList();
-		showTheList();
+//		showTheList();
+		changeTheList();
 	}
 	
 	
@@ -53,6 +54,12 @@ public class Controller
 			{
 				popup.displayText(current_creator.substring(current_letter_index, current_letter_index + 1));
 			}
+			
+			String topic = current_kahoot.getTopic();
+			for(int letter = topic.length() -1; letter >= 0; letter--)
+			{
+				popup.displayText(topic.substring(letter, letter + 1));
+			}
 		}
 	}
 	
@@ -73,4 +80,29 @@ public class Controller
 		myKahoots.add(mySecondKahoot);
 		myKahoots.add(theEpilogue);
 	}
+	
+	private void changeTheList()
+	{
+		popup.displayText("The current list size is: " + myKahoots.size() + " Kahoots");
+		Kahoot removed = myKahoots.remove(3);
+		popup.displayText("I removed the Kahoot by " + removed.getCreator());
+		popup.displayText("The list now has: " + myKahoots.size() + " Kahoots");
+		myKahoots.add(0, removed);
+		
+		popup.displayText("The list is still: " + myKahoots.size() + " Kahoots");
+		removed = myKahoots.set(2, new Kahoot());
+		popup.displayText("The Kahoot by " + removed.getCreator() + " was replaced with one by " + myKahoots.get(2).getCreator());
+	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
